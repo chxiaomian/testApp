@@ -1,0 +1,19 @@
+extends  ../node_modules/pug-bootstrap/_bootstrap
+append styles
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    +navbar-static("Project name","navbar")
+      +nav_item("/","active") Home
+      +nav_item("Users") Users
+      +nav_item("find") Find
+      +nav_item_dropdown("#")(label="Dropdown")
+        +nav_item("#") Action
+        +nav_item("#") Another action
+        +nav_item("#") Something else here
+        +nav_divider
+        +nav_item("#") Separated link
+        +nav_item("#") One more separated link
+
+    block content
+
+  p 2017
